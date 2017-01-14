@@ -44,7 +44,36 @@ background-color : orange ;
 
 <?php 
 
+
 require_once ('config.php') ; 
+
+if (isset ($_GET ['Delete']) ) {
+	
+$ID = $_GET ['Delete'] ; 
+
+$query = "DELETE  FROM customerdb WHERE (ID = '$ID')" ; 
+
+if (mysqli_query ($conn , $query ) ) {
+
+echo 'Successfully deleted' ; 	
+	
+	
+}	
+
+else {
+	
+echo mysqli_error ($conn) ; 	
+	
+}	
+	
+	
+	
+} 
+
+
+
+
+	
 
 $query  = "SELECT * FROM customerdb" ; 
 
