@@ -8,3 +8,4 @@ PART 1 : https://medium.com/@Adetona77/understanding-crud-using-facebook-as-the-
 
 PART 2 : https://medium.com/@Adetona77/understanding-crud-building-a-simple-application-for-storing-customer-records-using-php-30d58878fcf4#.vw8zp2kfl
 
+PART 3 : https://medium.com/@Adetona77/understanding-crud-how-to-read-update-delete-a-record-in-the-database-using-php-the-end-bd76b0861e8b#.gs6ymew4n
