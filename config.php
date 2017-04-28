@@ -2,7 +2,7 @@
 
 //Setting the credentials to connect to the database 
 
-$host = 'Localhost' ; 
+$host = 'localhost' ; 
 
 
 $dbName = 'crud' ; 

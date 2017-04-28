@@ -1,57 +1,49 @@
-<Html> 
+<!DOCTYPE html>
+<html>
 
-<head> 
-
-<title> Read record </title> 
-
-<style> 
-
-td {
-
-padding : 10px ; 	
-
-background-color : orange ; 
-	
-}
-
-
-</style>  
- 
- 
-</head> 
+<head>
+  <title> Read record </title>
+  <style>
+    td {
+      padding: 10px;
+      background-color: orange;
+    }
+  </style>
+</head>
 
 <body>
 
-<table> 
+  <table>
 
- 
-<tr> 
 
-<th> Name </th> 
+    <tr>
 
-<th> Email </th>
+      <th>Name</th>
 
-<th> Number </th> 
+      <th>Email</th>
 
-<th> Location </th> 
+      <th>Number</th>
 
-<th> Edit </th> 
+      <th>Location</th>
 
-<th> Delete </th> 
+      <th>Edit</th>
 
-</tr> 
- 
+      <th>Delete</th>
+
+    </tr>
 
 <?php 
 
+require_once 'config.php';
 
-require_once ('config.php') ; 
 
 if (isset ($_GET ['Delete']) ) {
 	
 $ID = $_GET ['Delete'] ; 
 
 $query = "DELETE  FROM customerdb WHERE (ID = '$ID')" ; 
+
+
 
 if (mysqli_query ($conn , $query ) ) {
 
@@ -68,7 +60,14 @@ echo mysqli_error ($conn) ;
 	
 	
 	
-} 
+}
+
+if (isset($_GET['msg'])){
+  $msg = urldecode($_GET['msg']);
+  unset($_GET['msg']);
+  echo $msg;
+  
+}
 
 
 
@@ -88,7 +87,7 @@ echo '<td>'.$row ['Name']. '</td>' ;
 
 echo '<td>' .$row ['Email']. '</td>' ;    
 
-echo   '<td>' .$row ['Number']. '</td>' ;  
+echo   '<td>' .$row ['Phoneno']. '</td>' ;  
 
 echo '<td>' .$row['Location']. '</td>' ;  
 
@@ -105,11 +104,8 @@ echo '<tr>' ;
 echo '</tr>' ;   
 
 ?>
-</table> 
+  </table>
 
-</body> 
+</body>
 
 </html>
-
-
-
